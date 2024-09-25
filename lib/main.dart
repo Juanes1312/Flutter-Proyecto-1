@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:intro/view/screens/operations_screen.dart';
+import 'package:ejemplo_clase/view/screens/operations_screen.dart';
 import 'view/screens/counter_screen.dart';
 
 void main() {
@@ -14,10 +14,7 @@ class IntroApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: const OperationsScreen(),
-      theme: ThemeData(
-        useMaterial3: true,
-        colorSchemeSeed: Colors.purple
-      ),
+      theme: ThemeData(useMaterial3: true, colorSchemeSeed: Colors.purple),
     );
   }
 }

@@ -20,17 +20,17 @@ class _CounterScreenState extends State<CounterScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('$cnt', style: const TextStyle(fontSize: 150, fontWeight: FontWeight.w100),),
-            const Text('Clicks', style: TextStyle(fontSize: 25),),
+            Text(
+              '$cnt',
+              style:
+                  const TextStyle(fontSize: 150, fontWeight: FontWeight.w100),
+            ),
+            const Text(
+              'Clicks',
+              style: TextStyle(fontSize: 25),
+            ),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          cnt++;
-          setState(() {});
-        },
-        child: const Icon(Icons.plus_one),
       ),
     );
   }

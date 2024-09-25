@@ -16,37 +16,23 @@ class _OperationsScreenState extends State<OperationsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          centerTitle: true,
-          backgroundColor: Colors.purple,
-          title: const Text('Counter Screen'),
-          leading: IconButton(
-            onPressed: () {
-              cnt = 0;
-              setState(() {});
-            },
-            icon: const Icon(Icons.refresh_outlined),
-          ),
-          actions: [
-            IconButton(
-              onPressed: () {
-                cnt = 0;
-                setState(() {});
-              },
-              icon: const Icon(Icons.refresh_outlined),
-            ),
-          ]),
+        centerTitle: true,
+        backgroundColor: Colors.purple,
+        title: const Text('Counter Screen'),
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            const SymbolWithLetters(),
             Text(
               '$cnt',
               style:
-                  const TextStyle(fontSize: 150, fontWeight: FontWeight.w100),
+                  const TextStyle(fontSize: 100, fontWeight: FontWeight.w100),
             ),
-            const Text(
-              'Clicks',
-              style: TextStyle(fontSize: 25),
+            Text(
+              cnt != 0 ? 'Clicks' : 'Click',
+              style: const TextStyle(fontSize: 25),
             ),
           ],
         ),
@@ -55,9 +41,9 @@ class _OperationsScreenState extends State<OperationsScreen> {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           CustomActionButon(
-            icon: Icons.ads_click_outlined,
+            icon: Icons.refresh_outlined,
             onPressed: () {
-              cnt=0;
+              cnt = 0;
               setState(() {});
             },
           ),
